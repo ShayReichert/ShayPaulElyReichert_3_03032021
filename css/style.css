@@ -1,1 +1,364 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* ------ VARIABLES ------ */
+:root {
+  --primary: #9356dc;
+  --secondary: #ff79da;
+  --tertiary: #99e2d0;
+  --bg-primary: #eaeaea;
+  --bg-secondary: #f6f6f6;
+  --bg-tertiary: #353535;
+  --gradient: linear-gradient(178deg, var(--secondary), var(--primary));
+  --font-titles: "Shrikhand", sans-serif;
+  --font-texts: "Roboto", sans-serif;
+  --shadow-dark: 0px 3px 8px 0px #808080a8;
+  --shadow-light: 0px 3px 10px 0px #80808059;
+  --shadow-hover: 0px 4px 15px 0px #808080a8;
+}
+
+/* ------ GENERAL ------ */
+body {
+  cursor: default;
+  font-family: var(--font-texts);
+}
+
+.logo {
+  font-family: var(--font-titles);
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ------ HEADER ------ */
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header h1 {
+  padding: 1.2rem 0 0.6rem 0;
+  font-size: 1.85em;
+}
+
+/* ------ MAIN ------ */
+/* --- Introduction Section */
+.introduction .location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: var(--bg-primary);
+  padding: 1rem 0;
+  font-weight: 500;
+  -webkit-box-shadow: inset 0px 2px 3px #3535353d;
+          box-shadow: inset 0px 2px 3px #3535353d;
+}
+
+.introduction .location i {
+  margin-right: 1rem;
+}
+
+.introduction .presentation {
+  background: var(--bg-secondary);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+}
+
+.introduction .presentation h2 {
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.introduction .presentation p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #5d5d5d;
+  font-weight: 300;
+}
+
+.introduction .presentation button {
+  margin: 1rem 0 1.3rem;
+  padding: 1rem 1.4rem;
+  font-weight: normal;
+  color: white;
+  border-radius: 50px;
+  border: none;
+  background: var(--gradient);
+  -webkit-box-shadow: var(--shadow-dark);
+          box-shadow: var(--shadow-dark);
+  cursor: pointer;
+}
+
+.introduction .presentation button:hover {
+  opacity: 0.95;
+  -webkit-box-shadow: var(--shadow-hover);
+          box-shadow: var(--shadow-hover);
+}
+
+.introduction .operation {
+  padding: 3rem 1rem;
+}
+
+.introduction .operation .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin: 1.5rem 0.4rem 1.5rem 1rem;
+  background: var(--bg-secondary);
+  border-radius: 20px;
+  cursor: pointer;
+  -webkit-box-shadow: var(--shadow-light);
+          box-shadow: var(--shadow-light);
+}
+
+.introduction .operation .card:hover {
+  background: #f5edff;
+}
+
+.introduction .operation .card:hover i {
+  color: var(--primary);
+}
+
+.introduction .operation .card span {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  left: -10px;
+  background: var(--primary);
+  color: var(--bg-secondary);
+  padding: 0.3rem;
+  border-radius: 50px;
+  width: 13px;
+  height: 13px;
+  font-size: 14px;
+}
+
+.introduction .operation .card i {
+  padding: 1.7rem 2rem;
+  color: grey;
+  -webkit-transform: scale(0.9, 1);
+          transform: scale(0.9, 1);
+}
+
+.introduction .operation .card .fa-mobile-alt {
+  font-size: 20px;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+.introduction .operation .card .fa-list-ul {
+  font-size: 19px;
+}
+
+.introduction .operation .card .fa-store {
+  font-size: 17px;
+}
+
+.introduction .operation .card p {
+  font-weight: 500;
+}
+
+/* --- Restaurants Section */
+.restaurants {
+  background: var(--bg-secondary);
+  padding: 3rem 1rem;
+}
+
+.restaurants h2 {
+  margin-bottom: 0.8rem;
+}
+
+.restaurants .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.restaurants .restaurant {
+  position: relative;
+  margin: 0.7rem 0;
+  background: white;
+  border-radius: 15px;
+  -webkit-box-shadow: var(--shadow-light);
+          box-shadow: var(--shadow-light);
+  max-width: 24rem;
+}
+
+.restaurants .restaurant .image {
+  overflow: hidden;
+  width: 100%;
+  height: 11rem;
+  border-radius: 15px 15px 0 0;
+}
+
+.restaurants .restaurant img {
+  max-width: 100%;
+  -webkit-transform: translateY(-53px);
+          transform: translateY(-53px);
+}
+
+.restaurants .restaurant .translate-img {
+  -webkit-transform: translateY(-155px);
+          transform: translateY(-155px);
+}
+
+.restaurants .restaurant .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.2rem 1rem 0.8rem;
+}
+
+.restaurants .restaurant .content .name p {
+  font-size: 17px;
+  margin: 0.2rem 0;
+  font-weight: 300;
+}
+
+.restaurants .restaurant .content .heart {
+  position: relative;
+  cursor: pointer;
+}
+
+.restaurants .restaurant .content .heart:hover .empty-heart {
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  opacity: 0;
+  -webkit-transform: scale(0.9, 0);
+          transform: scale(0.9, 0);
+}
+
+.restaurants .restaurant .content .heart:hover .full-heart {
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  opacity: 1;
+  -webkit-transform: scale(0.9, 1);
+          transform: scale(0.9, 1);
+}
+
+.restaurants .restaurant .content .heart i {
+  font-size: 27px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.restaurants .restaurant .content .heart .full-heart {
+  -webkit-transform: scale(0.9, 0);
+          transform: scale(0.9, 0);
+  opacity: 0;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  background: -webkit-linear-gradient(var(--primary), var(--secondary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.restaurants .restaurant .content .heart .empty-heart {
+  -webkit-transform: scale(0.9, 1);
+          transform: scale(0.9, 1);
+  opacity: 1;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.restaurants .restaurant .content .new {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--tertiary);
+  color: #018766;
+  padding: 0.4rem 0.8rem;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 2px;
+}
+
+/* ------ FOOTER ------ */
+footer {
+  background: var(--bg-tertiary);
+  color: white;
+  padding: 1.5rem;
+}
+
+footer h3 {
+  font-size: 1.1rem;
+  font-weight: 200;
+  margin-bottom: 1rem;
+}
+
+footer i {
+  padding-right: 0.5rem;
+  font-size: 13px;
+}
+
+footer li {
+  margin-bottom: 0.6rem;
+  font-size: 16px;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+footer li:hover {
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */
