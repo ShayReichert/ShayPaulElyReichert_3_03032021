@@ -21,6 +21,7 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   cursor: default;
   font-family: var(--font-texts);
@@ -29,6 +30,7 @@ body {
     background: var(--bg-primary);
   }
 }
+
 .logo {
   display: flex;
   justify-content: center;
@@ -48,11 +50,13 @@ h3 {
 h2 {
   font-size: 1.5rem;
 }
+
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
 a {
   text-decoration: none;
   color: inherit;
@@ -97,6 +101,12 @@ a {
   }
 }
 
+main {
+  position: relative;
+  // max-width: 1400px;
+  margin: auto;
+}
+
 // INDEX.HTML
 /* ------ HEADER ------ */
 header {
@@ -131,7 +141,7 @@ header {
 
   @media screen and (min-width: 768px) {
     position: absolute;
-    top: 2px;
+    top: -50px;
     right: 30px;
     box-shadow: none;
     background: transparent;
@@ -431,6 +441,9 @@ footer {
 
 header {
   position: relative;
+  max-width: 1400px;
+  margin: auto;
+
   @media screen and (min-width: 768px) {
     background: var(--bg-primary);
   }
@@ -450,9 +463,14 @@ header {
   }
 }
 
-.image {
+.large-image {
   img {
     width: 100%;
+
+    @media screen and (min-width: 768px) {
+      object-fit: cover;
+      height: 30vh;
+    }
   }
 }
 
@@ -460,6 +478,11 @@ header {
   position: relative;
   padding: 1.5rem 1.1rem;
   background: var(--bg-secondary);
+
+  @media screen and (min-width: 768px) {
+    padding: 0;
+    transform: translateY(-4px);
+  }
 
   .header-menus {
     position: absolute;
@@ -473,6 +496,20 @@ header {
     justify-content: space-between;
     border-radius: 40px 40px 0 0;
     padding: 2rem 2.3rem 2rem 1.5rem;
+
+    @media screen and (min-width: 768px) {
+      position: relative;
+      max-width: 776px;
+      margin: auto;
+    }
+
+    @media screen and (min-width: 1024px) {
+      max-width: 906px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      max-width: 1100px;
+    }
 
     h1 {
       font-family: var(--font-titles);
@@ -490,8 +527,25 @@ header {
     }
   }
 
+  .wrapper-menus {
+    margin: auto;
+    max-width: 360px;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: space-evenly;
+      max-width: max-content;
+      column-gap: 20px;
+      transform: translateY(-30px);
+    }
+  }
+
   .menu {
     padding-top: 1.3rem;
+
+    @media screen and (min-width: 768px) {
+      padding-top: 0;
+    }
 
     h2 {
       position: relative;
@@ -524,9 +578,17 @@ header {
     border-radius: 15px;
     background: white;
     box-shadow: 0px 4px 9px #0000001a;
-    max-width: 400px;
+    max-width: 360px;
     cursor: pointer;
     animation: 2s menu_apparition 700ms forwards;
+
+    @media screen and (min-width: 768px) {
+      max-width: 230px;
+    }
+    @media screen and (min-width: 1024px) {
+      max-width: none;
+      width: 100%;
+    }
 
     &:hover .meal-infos {
       width: 61%;
@@ -548,9 +610,11 @@ header {
       font-size: 18px;
       font-weight: 500;
       margin-bottom: 0.3rem;
-      white-space: nowrap;
       overflow: hidden;
-      text-overflow: ellipsis;
+
+      @media screen and (min-width: 768px) {
+        font-size: 15px;
+      }
     }
     .description {
       margin: 0;
@@ -559,6 +623,10 @@ header {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+
+      @media screen and (min-width: 768px) {
+        font-size: 13px;
+      }
     }
 
     .meal-price {
@@ -626,6 +694,10 @@ header {
     align-items: center;
     padding: 2.2rem 0 3.3rem;
 
+    @media screen and (min-width: 768px) {
+      transform: translateY(-30px);
+    }
+
     button {
       border-radius: 40px;
       background: var(--gradient);
@@ -642,4 +714,9 @@ header {
       }
     }
   }
+}
+
+.wrapper-footer {
+  max-width: 1400px;
+  margin: auto;
 }

@@ -115,6 +115,11 @@ a {
   -webkit-text-fill-color: transparent;
 }
 
+main {
+  position: relative;
+  margin: auto;
+}
+
 /* ------ HEADER ------ */
 header {
   display: -webkit-box;
@@ -167,7 +172,7 @@ header h1 {
 @media screen and (min-width: 768px) {
   .location {
     position: absolute;
-    top: 2px;
+    top: -50px;
     right: 30px;
     -webkit-box-shadow: none;
             box-shadow: none;
@@ -534,6 +539,8 @@ footer li:hover {
 
 header {
   position: relative;
+  max-width: 1400px;
+  margin: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -558,14 +565,30 @@ header .previous:hover {
           box-shadow: 0px 0px 3px 6px #80808040;
 }
 
-.image img {
+.large-image img {
   width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .large-image img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 30vh;
+  }
 }
 
 .menus {
   position: relative;
   padding: 1.5rem 1.1rem;
   background: var(--bg-secondary);
+}
+
+@media screen and (min-width: 768px) {
+  .menus {
+    padding: 0;
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+  }
 }
 
 .menus .header-menus {
@@ -587,6 +610,26 @@ header .previous:hover {
   padding: 2rem 2.3rem 2rem 1.5rem;
 }
 
+@media screen and (min-width: 768px) {
+  .menus .header-menus {
+    position: relative;
+    max-width: 776px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .menus .header-menus {
+    max-width: 906px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .menus .header-menus {
+    max-width: 1100px;
+  }
+}
+
 .menus .header-menus h1 {
   font-family: var(--font-titles);
   font-weight: normal;
@@ -603,8 +646,37 @@ header .previous:hover {
   background: var(--bg-secondary);
 }
 
+.menus .wrapper-menus {
+  margin: auto;
+  max-width: 360px;
+}
+
+@media screen and (min-width: 768px) {
+  .menus .wrapper-menus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+}
+
 .menus .menu {
   padding-top: 1.3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .menus .menu {
+    padding-top: 0;
+  }
 }
 
 .menus .menu h2 {
@@ -642,10 +714,23 @@ header .previous:hover {
   background: white;
   -webkit-box-shadow: 0px 4px 9px #0000001a;
           box-shadow: 0px 4px 9px #0000001a;
-  max-width: 400px;
+  max-width: 360px;
   cursor: pointer;
   -webkit-animation: 2s menu_apparition 700ms forwards;
           animation: 2s menu_apparition 700ms forwards;
+}
+
+@media screen and (min-width: 768px) {
+  .menus .meal {
+    max-width: 230px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .menus .meal {
+    max-width: none;
+    width: 100%;
+  }
 }
 
 .menus .meal:hover .meal-infos {
@@ -672,9 +757,13 @@ header .previous:hover {
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 0.3rem;
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+}
+
+@media screen and (min-width: 768px) {
+  .menus .meal h3 {
+    font-size: 15px;
+  }
 }
 
 .menus .meal .description {
@@ -684,6 +773,12 @@ header .previous:hover {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+@media screen and (min-width: 768px) {
+  .menus .meal .description {
+    font-size: 13px;
+  }
 }
 
 .menus .meal .meal-price {
@@ -820,6 +915,13 @@ header .previous:hover {
   padding: 2.2rem 0 3.3rem;
 }
 
+@media screen and (min-width: 768px) {
+  .menus .order {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+}
+
 .menus .order button {
   border-radius: 40px;
   background: var(--gradient);
@@ -838,5 +940,10 @@ header .previous:hover {
           box-shadow: var(--shadow-hover);
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
+}
+
+.wrapper-footer {
+  max-width: 1400px;
+  margin: auto;
 }
 /*# sourceMappingURL=style.css.map */
