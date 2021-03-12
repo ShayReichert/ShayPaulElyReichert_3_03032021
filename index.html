@@ -15,20 +15,20 @@
 
   <body>
     <header>
-      <h1 class="logo">
-        <a href="/">ohmyfood</a>
-      </h1>
+      <a class="logo" title="Retour à l'accueil" href="/">
+        <img src="./images/logo/ohmyfood@2x.svg" alt="logo du site" />
+      </a>
     </header>
 
     <main>
-      <section class="location">
+      <div class="location">
         <i class="fas fa-map-marker-alt"></i>
         <span>Paris, Belleville</span>
-      </section>
+      </div>
 
       <section class="introduction">
         <div class="presentation">
-          <h2>Réservez le menu qui vous convient</h2>
+          <h1>Réservez le menu qui vous convient</h1>
           <p>
             Découvrez des restaurants d'exception, sélectionnés par nos soins.
           </p>
@@ -63,25 +63,28 @@
         <h2>Restaurants</h2>
 
         <div class="cards">
-          <div class="restaurant">
-            <div class="image">
-              <img
-                src="./images/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                alt="Un plat dans un restaurant"
-              />
-            </div>
-            <div class="content">
-              <div class="name">
-                <h3>La palette du goût</h3>
-                <p>Ménilmontant</p>
+          <a href="./la-palette-du-gout.html">
+            <div class="restaurant">
+              <div class="image">
+                <img
+                  src="./images/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                  alt="Un plat dans un restaurant"
+                />
               </div>
-              <div class="heart">
-                <i class="far fa-heart empty-heart"></i>
-                <i class="fas fa-heart full-heart"></i>
+              <div class="content">
+                <div class="name">
+                  <h3>La palette du goût</h3>
+                  <p>Ménilmontant</p>
+                </div>
+                <div class="heart">
+                  <i class="far fa-heart empty-heart"></i>
+                  <div class="hide-heart"></div>
+                  <i class="fas fa-heart full-heart"></i>
+                </div>
+                <div class="new">Nouveau</div>
               </div>
-              <div class="new">Nouveau</div>
             </div>
-          </div>
+          </a>
 
           <div class="restaurant">
             <div class="image">
@@ -98,6 +101,7 @@
               </div>
               <div class="heart">
                 <i class="far fa-heart empty-heart"></i>
+                <div class="hide-heart"></div>
                 <i class="fas fa-heart full-heart"></i>
               </div>
               <div class="new">Nouveau</div>
@@ -118,6 +122,7 @@
               </div>
               <div class="heart">
                 <i class="far fa-heart empty-heart"></i>
+                <div class="hide-heart"></div>
                 <i class="fas fa-heart full-heart"></i>
               </div>
             </div>
@@ -137,6 +142,7 @@
               </div>
               <div class="heart">
                 <i class="far fa-heart empty-heart"></i>
+                <div class="hide-heart"></div>
                 <i class="fas fa-heart full-heart"></i>
               </div>
             </div>
@@ -146,9 +152,9 @@
     </main>
 
     <footer>
-      <h3 class="logo">
-        <a href="/">ohmyfood</a>
-      </h3>
+      <a class="logo-footer" title="Retour à l'accueil" href="/">
+        <h3>ohmyfood</h3>
+      </a>
       <ul>
         <li>
           <i class="fas fa-utensils"></i>
